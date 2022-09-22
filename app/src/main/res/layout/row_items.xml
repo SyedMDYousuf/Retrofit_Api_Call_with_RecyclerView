@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:elevation="3dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_card_view">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="20dp"
+                android:id="@+id/image_view"
+                android:src="@drawable/google"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_id"
+                android:layout_toRightOf="@+id/image_view"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/image_view"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_title"
+                android:layout_toRightOf="@+id/image_view"
+                android:layout_below="@+id/cv_id"
+                app:layout_constraintTop_toBottomOf="@id/cv_id"
+                app:layout_constraintLeft_toRightOf="@+id/image_view"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:paddingBottom="5dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
