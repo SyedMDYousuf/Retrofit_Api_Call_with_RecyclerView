@@ -15,10 +15,12 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var id: TextView
         var title: TextView
+        var body: TextView
 
         init {
             id = itemView.cv_id
             title = itemView.cv_title
+            body = itemView.cv_body
         }
 
 
@@ -33,6 +35,7 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.id.text = userList[position].id.toString()
         holder.title.text = userList[position].title.toString()
+        holder.body.text = userList[position].body.toString()
     }
 
     override fun getItemCount(): Int {
